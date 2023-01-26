@@ -1,5 +1,5 @@
 {
-	"name": "SqlServerTable1",
+	"name": "SqlServerTableLaptop",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SqlServerLaptop",
