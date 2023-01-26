@@ -1,0 +1,75 @@
+{
+	"name": "SqlServerTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerLaptop",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "ProductID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "BusinessEntityID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "AverageLeadTime",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "StandardPrice",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "LastReceiptCost",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "LastReceiptDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "MinOrderQty",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MaxOrderQty",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "OnOrderQty",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "UnitMeasureCode",
+				"type": "nchar"
+			},
+			{
+				"name": "ModifiedDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "Purchasing",
+			"table": "ProductVendor"
+		}
+	}
+}
