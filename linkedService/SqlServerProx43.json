@@ -1,0 +1,17 @@
+{
+	"name": "SqlServerProx43",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "Sql server on Proxmo 43 IP address",
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=.;initial catalog=AdventureWorks2019;user id=sa",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwODc3M2E4MS1lNzEyLTQ1M2ItYWNhMC05ZmNiZmM1OTM3YjgiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "myselfhostingruntime0001",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
