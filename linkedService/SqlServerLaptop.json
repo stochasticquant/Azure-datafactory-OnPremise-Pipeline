@@ -5,8 +5,8 @@
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
-			"connectionString": "integrated security=False;data source=FLYINGPOLISHMAN;initial catalog=AdventureWorks2019;user id=sa",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI4NTE1Mjk5OC03ODhiLTQxY2QtODNlNS0wYjFlYjNjYmRlMDAiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"connectionString": "integrated security=False;data source=FLYINGPOLISHMAN;initial catalog=AdventureWorks2019;user id=charles",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJhMmQyYTczYi1iN2ZiLTRkYTUtYmM0Ni1kMzM5N2U4ZjdlZGUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "myselfhostingruntime0001",
