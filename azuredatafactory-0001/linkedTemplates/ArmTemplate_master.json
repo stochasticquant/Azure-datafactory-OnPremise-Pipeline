@@ -1,0 +1,70 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "azuredatafactory-0001"
+		},
+		"SqlServeProx64_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServeProx64'"
+		},
+		"SqlServerLaptop_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServerLaptop'"
+		},
+		"SqlServerProx43_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServerProx43'"
+		},
+		"AzureDataLakeStorageLink0001_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://myadfstorageaccount0001.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "azuredatafactory-0001_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"SqlServeProx64_connectionString": {
+						"value": "[parameters('SqlServeProx64_connectionString')]"
+					},
+					"SqlServerLaptop_connectionString": {
+						"value": "[parameters('SqlServerLaptop_connectionString')]"
+					},
+					"SqlServerProx43_connectionString": {
+						"value": "[parameters('SqlServerProx43_connectionString')]"
+					},
+					"AzureDataLakeStorageLink0001_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorageLink0001_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
