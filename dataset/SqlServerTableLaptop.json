@@ -68,8 +68,8 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "Purchasing",
-			"table": "ProductVendor"
+			"schema": "Sales",
+			"table": "SalesOrderHeader"
 		}
 	}
 }
