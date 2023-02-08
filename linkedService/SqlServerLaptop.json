@@ -1,16 +1,22 @@
 {
 	"name": "SqlServerLaptop",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
-			"connectionString": "integrated security=False;data source=FLYINGPOLISHMAN;initial catalog=AdventureWorks2019;user id=charles",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyZDYyODMwMi01MTA3LTQ2MTctOWRhYi00NzliODZlOWQ0NWIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVaultLink",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "azure-sql-access"
+			}
 		},
 		"connectVia": {
 			"referenceName": "myselfhostingruntime0001",
 			"type": "IntegrationRuntimeReference"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
