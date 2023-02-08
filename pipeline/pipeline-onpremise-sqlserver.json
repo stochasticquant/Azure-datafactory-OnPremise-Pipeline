@@ -179,7 +179,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SqlServerTableLaptop",
+						"referenceName": "On_Premise_SalesOrderHeader",
 						"type": "DatasetReference"
 					}
 				],

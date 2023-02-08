@@ -1,5 +1,5 @@
 {
-	"name": "SqlServerTableLaptop",
+	"name": "On_Premise_SalesOrderHeader",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SqlServerLaptop",
