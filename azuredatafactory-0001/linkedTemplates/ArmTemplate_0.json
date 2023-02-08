@@ -479,7 +479,7 @@
 					}
 				],
 				"typeProperties": {
-					"schema": "Sales",
+					"schema": "SalesLT",
 					"table": "SalesOrderHeader"
 				}
 			},
