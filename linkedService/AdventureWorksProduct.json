@@ -1,0 +1,23 @@
+{
+	"name": "AdventureWorksProduct",
+	"properties": {
+		"description": "lint to product table",
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVaultLink",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "SQL-Log-in",
+				"secretVersion": "901c905e40d84b89a604816d4a863492"
+			}
+		},
+		"connectVia": {
+			"referenceName": "myselfhostingruntime0001",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
