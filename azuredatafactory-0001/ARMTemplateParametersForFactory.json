@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "azuredatafactory-0001"
 		},
+		"AmazonS3_secretAccessKey": {
+			"value": ""
+		},
 		"SqlServeProx64_connectionString": {
 			"value": ""
 		},
@@ -14,8 +17,17 @@
 		"SqlServerProx43_connectionString": {
 			"value": ""
 		},
+		"AmazonS3_properties_typeProperties_accessKeyId": {
+			"value": "AKIAX6JRPLUXK3H4WDE6"
+		},
 		"AzureDataLakeStorageLink0001_properties_typeProperties_url": {
 			"value": "https://myadfstorageaccount0001.dfs.core.windows.net/"
+		},
+		"AzureKeyVaultLink_properties_typeProperties_baseUrl": {
+			"value": "https://MyAdfKeyValut.vault.azure.net/"
+		},
+		"AzureSqlServer_properties_typeProperties_connectionString_secretName": {
+			"value": "azure-sql-access"
 		}
 	}
 }

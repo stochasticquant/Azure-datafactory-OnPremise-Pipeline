@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "azuredatafactory-0001"
 		},
+		"AmazonS3_secretAccessKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'secretAccessKey' of 'AmazonS3'"
+		},
 		"SqlServeProx64_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServeProx64'"
@@ -19,9 +23,21 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServerProx43'"
 		},
+		"AmazonS3_properties_typeProperties_accessKeyId": {
+			"type": "string",
+			"defaultValue": "AKIAX6JRPLUXK3H4WDE6"
+		},
 		"AzureDataLakeStorageLink0001_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://myadfstorageaccount0001.dfs.core.windows.net/"
+		},
+		"AzureKeyVaultLink_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://MyAdfKeyValut.vault.azure.net/"
+		},
+		"AzureSqlServer_properties_typeProperties_connectionString_secretName": {
+			"type": "string",
+			"defaultValue": "azure-sql-access"
 		},
 		"containerUri": {
 			"type": "string",
@@ -50,6 +66,9 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AmazonS3_secretAccessKey": {
+						"value": "[parameters('AmazonS3_secretAccessKey')]"
+					},
 					"SqlServeProx64_connectionString": {
 						"value": "[parameters('SqlServeProx64_connectionString')]"
 					},
@@ -59,8 +78,17 @@
 					"SqlServerProx43_connectionString": {
 						"value": "[parameters('SqlServerProx43_connectionString')]"
 					},
+					"AmazonS3_properties_typeProperties_accessKeyId": {
+						"value": "[parameters('AmazonS3_properties_typeProperties_accessKeyId')]"
+					},
 					"AzureDataLakeStorageLink0001_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorageLink0001_properties_typeProperties_url')]"
+					},
+					"AzureKeyVaultLink_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVaultLink_properties_typeProperties_baseUrl')]"
+					},
+					"AzureSqlServer_properties_typeProperties_connectionString_secretName": {
+						"value": "[parameters('AzureSqlServer_properties_typeProperties_connectionString_secretName')]"
 					}
 				}
 			},
