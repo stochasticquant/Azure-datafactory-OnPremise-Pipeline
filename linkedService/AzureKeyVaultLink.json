@@ -1,0 +1,11 @@
+{
+	"name": "AzureKeyVaultLink",
+	"properties": {
+		"description": "Link service to Kay Vault",
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://MyAdfKeyValut.vault.azure.net/"
+		}
+	}
+}
