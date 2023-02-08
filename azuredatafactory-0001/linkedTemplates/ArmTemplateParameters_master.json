@@ -8,9 +8,6 @@
 		"AmazonS3_secretAccessKey": {
 			"value": ""
 		},
-		"SqlServerLaptop_connectionString": {
-			"value": ""
-		},
 		"AmazonS3_properties_typeProperties_accessKeyId": {
 			"value": "AKIAX6JRPLUXK3H4WDE6"
 		},
@@ -23,7 +20,7 @@
 		"AzureSqlServer_properties_typeProperties_connectionString_secretName": {
 			"value": "azure-sql-access"
 		},
-		"SqlServerLaptop2_properties_typeProperties_connectionString_secretName": {
+		"SqlServerLaptop_properties_typeProperties_connectionString_secretName": {
 			"value": "azure-sql-access"
 		},
 		"containerUri": {

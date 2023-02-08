@@ -11,10 +11,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'secretAccessKey' of 'AmazonS3'"
 		},
-		"SqlServerLaptop_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'SqlServerLaptop'"
-		},
 		"AmazonS3_properties_typeProperties_accessKeyId": {
 			"type": "string",
 			"defaultValue": "AKIAX6JRPLUXK3H4WDE6"
@@ -31,7 +27,7 @@
 			"type": "string",
 			"defaultValue": "azure-sql-access"
 		},
-		"SqlServerLaptop2_properties_typeProperties_connectionString_secretName": {
+		"SqlServerLaptop_properties_typeProperties_connectionString_secretName": {
 			"type": "string",
 			"defaultValue": "azure-sql-access"
 		}
@@ -424,7 +420,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "SqlServerLaptop2",
+					"referenceName": "SqlServerLaptop",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -485,7 +481,7 @@
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/SqlServerLaptop2')]"
+				"[concat(variables('factoryId'), '/linkedServices/SqlServerLaptop')]"
 			]
 		},
 		{
@@ -670,32 +666,13 @@
 				"annotations": [],
 				"type": "SqlServer",
 				"typeProperties": {
-					"connectionString": "[parameters('SqlServerLaptop_connectionString')]"
-				},
-				"connectVia": {
-					"referenceName": "myselfhostingruntime0001",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/myselfhostingruntime0001')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SqlServerLaptop2')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
 					"connectionString": {
 						"type": "AzureKeyVaultSecret",
 						"store": {
 							"referenceName": "AzureKeyVaultLink",
 							"type": "LinkedServiceReference"
 						},
-						"secretName": "[parameters('SqlServerLaptop2_properties_typeProperties_connectionString_secretName')]"
+						"secretName": "[parameters('SqlServerLaptop_properties_typeProperties_connectionString_secretName')]"
 					}
 				},
 				"connectVia": {
