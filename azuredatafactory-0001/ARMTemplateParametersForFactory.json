@@ -8,13 +8,7 @@
 		"AmazonS3_secretAccessKey": {
 			"value": ""
 		},
-		"SqlServeProx64_connectionString": {
-			"value": ""
-		},
 		"SqlServerLaptop_connectionString": {
-			"value": ""
-		},
-		"SqlServerProx43_connectionString": {
 			"value": ""
 		},
 		"AmazonS3_properties_typeProperties_accessKeyId": {
@@ -27,6 +21,9 @@
 			"value": "https://MyAdfKeyValut.vault.azure.net/"
 		},
 		"AzureSqlServer_properties_typeProperties_connectionString_secretName": {
+			"value": "azure-sql-access"
+		},
+		"SqlServerLaptop2_properties_typeProperties_connectionString_secretName": {
 			"value": "azure-sql-access"
 		}
 	}

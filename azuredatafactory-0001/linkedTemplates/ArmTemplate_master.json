@@ -11,17 +11,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'secretAccessKey' of 'AmazonS3'"
 		},
-		"SqlServeProx64_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'SqlServeProx64'"
-		},
 		"SqlServerLaptop_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServerLaptop'"
-		},
-		"SqlServerProx43_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'SqlServerProx43'"
 		},
 		"AmazonS3_properties_typeProperties_accessKeyId": {
 			"type": "string",
@@ -36,6 +28,10 @@
 			"defaultValue": "https://MyAdfKeyValut.vault.azure.net/"
 		},
 		"AzureSqlServer_properties_typeProperties_connectionString_secretName": {
+			"type": "string",
+			"defaultValue": "azure-sql-access"
+		},
+		"SqlServerLaptop2_properties_typeProperties_connectionString_secretName": {
 			"type": "string",
 			"defaultValue": "azure-sql-access"
 		},
@@ -69,14 +65,8 @@
 					"AmazonS3_secretAccessKey": {
 						"value": "[parameters('AmazonS3_secretAccessKey')]"
 					},
-					"SqlServeProx64_connectionString": {
-						"value": "[parameters('SqlServeProx64_connectionString')]"
-					},
 					"SqlServerLaptop_connectionString": {
 						"value": "[parameters('SqlServerLaptop_connectionString')]"
-					},
-					"SqlServerProx43_connectionString": {
-						"value": "[parameters('SqlServerProx43_connectionString')]"
 					},
 					"AmazonS3_properties_typeProperties_accessKeyId": {
 						"value": "[parameters('AmazonS3_properties_typeProperties_accessKeyId')]"
@@ -89,6 +79,9 @@
 					},
 					"AzureSqlServer_properties_typeProperties_connectionString_secretName": {
 						"value": "[parameters('AzureSqlServer_properties_typeProperties_connectionString_secretName')]"
+					},
+					"SqlServerLaptop2_properties_typeProperties_connectionString_secretName": {
+						"value": "[parameters('SqlServerLaptop2_properties_typeProperties_connectionString_secretName')]"
 					}
 				}
 			},
