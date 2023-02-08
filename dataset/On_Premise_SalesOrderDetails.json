@@ -2,7 +2,7 @@
 	"name": "On_Premise_SalesOrderDetails",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "SqlServerLaptop2",
+			"referenceName": "SqlServerLaptop",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
